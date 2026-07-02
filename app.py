@@ -65,7 +65,7 @@ class KalangoEV(ctk.CTk):
 
         self.markets_dropdown = ctk.CTkOptionMenu(
             card,
-            values=["2 Mercados", "3 Mercados", "4 Mercados"],
+            values=["2 Mercados", "3 Mercados", "4 Mercados", "5 Mercados", "6 Mercados", "7 Mercados"],
             fg_color="#232330",
             button_color="#232330",
             button_hover_color="#2c2c3a",

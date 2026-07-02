@@ -1,6 +1,6 @@
 # 🦎 KalangoEV
 
-Calculadora de **Valor Esperado (+EV)** para identificar distorções matemáticas em mercados e bilhetes de apostas esportivas.
+Calculadora de EV pra esmagar a concorrencia paga 🤣👀
 
 ---
 
