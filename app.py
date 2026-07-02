@@ -170,7 +170,7 @@ class KalangoEV(ctk.CTk):
         ev = found_odd * fair_prob - 1
         b = found_odd - 1
         kelly_fraction = ev / b if b > 0 else 0
-        kelly_fraction = max(kelly_fraction, 0)
+        kelly_fraction = max(kelly_fraction, 0) / 2
 
         self.payout_row.configure(text=f"{payout * 100:.2f}%")
         self.fair_odd_row.configure(text=f"{fair_odd:.3f}")
