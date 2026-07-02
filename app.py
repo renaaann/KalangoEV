@@ -1,5 +1,15 @@
+import os
+import sys
 import customtkinter as ctk
 from PIL import Image, ImageTk
+
+# Merda pro meu .exe funcionar, n sei pq n vai
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 ctk.set_appearance_mode("dark")
 
@@ -13,7 +23,8 @@ class KalangoEV(ctk.CTk):
         super().__init__()
 
         self.title("KalangoEV")
-        img = ImageTk.PhotoImage(file="icons/kalango-tips.ico")
+        
+        img = ImageTk.PhotoImage(file=resource_path("icons/kalango-tips.ico"))
         self.iconphoto(False, img)
 
         self.geometry("380x760")
@@ -32,7 +43,8 @@ class KalangoEV(ctk.CTk):
         self.build_EV()
 
         self.reset_contraria()
-        self.after(250, lambda: self.iconbitmap("icons/kalango-tips.ico"))
+        
+        self.after(250, lambda: self.iconbitmap(resource_path("icons/kalango-tips.ico")))
 
     def setup_header(self):
         header = ctk.CTkFrame(self.scroll_frame, fg_color="transparent")
